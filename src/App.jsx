@@ -8,7 +8,7 @@ function App() {
 	const [user, setUser] = useState([]);
 
 	useEffect(() => {
-		fetch("http://localhost:3000/users")
+		fetch("http://localhost:5000/users")
 			.then((response) => response.json())
 			.then((data) => setUser(data));
 	}, []);
@@ -28,7 +28,7 @@ function App() {
 
 		const user = { id, name, age, profession, email, address };
 
-		fetch("http://localhost:3000/users", {
+		fetch("http://localhost:5000/users", {
 			method: "POST",
 			headers: {
 				"content-type": "application/json",
